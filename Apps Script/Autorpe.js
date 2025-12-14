@@ -1,5 +1,8 @@
 // 监听单元格修改事件
 function onEdit(e) {
+  // 基础检查，防止事件对象为空
+  if (!e || !e.range) return;
+
   const sheet = e.source.getActiveSheet();
   const range = e.range;
   const row = range.getRow();
@@ -23,7 +26,17 @@ function onEdit(e) {
     'Hard[+1]': 1
   };
   
-  const value = e.value;
+  // 优化：优先使用 e.value，如果不存在（移动端延迟/粘贴），则主动读取单元格值
+  let value = e.value;
+  
+  if (value === undefined || value === null) {
+    // 仅当编辑的是单个单元格时才处理，避免多行粘贴导致性能问题
+    if (range.getNumRows() === 1 && range.getNumColumns() === 1) {
+      value = range.getValue();
+    } else {
+      return;
+    }
+  }
   
   // 检查输入的值是否在有效值列表中
   if (!triggerValues.hasOwnProperty(value)) {
