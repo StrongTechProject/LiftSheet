@@ -423,15 +423,15 @@ The data is also visible in the **📊Volume Tracker**.
 
 
 
-### 4Customizing Your Program
+### 4.Customizing Your Program
 
 #### 4.1Add Your Favorite Exercise
 
-Click the **pen edit icon**. I
+Click the **pen edit icon**.
 
 <img src="assets/image-20251121005738480.png" alt="image-20251121005738480" style="zoom:50%;" />
 
-n the side panel, select **Add another item**, fill in the details, and select **Done, Apply to all.**
+In the side panel, select **Add another item**, fill in the details, and select **Done, Apply to all.**
 
 <img src="assets/image-20251121005849107.png" alt="image-20251121005849107" style="zoom:50%;" />
 
@@ -506,4 +506,3 @@ The AI can **analyze training data** and **plan future arrangements** by directl
 #### 5.4Taper Calculator
 
 ![image-20251121015944876](assets/image-20251121015944876.png)
-
