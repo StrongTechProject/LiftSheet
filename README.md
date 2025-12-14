@@ -1,4 +1,5 @@
-# LiftSheet [中文](README.zh.md)
+# LiftSheet 
+[中文](README.zh.md)
 
 ## What is LiftSheet?
 
