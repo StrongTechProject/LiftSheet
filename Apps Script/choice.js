@@ -26,7 +26,15 @@ const CONFIG = {
     "Tertiary Bench":     "B44:N49", 
 
     // Reset / Default (坐标已更新)
-    "Choice of Mainlift":    "B51:N56" 
+    "Choice of Mainlift":    "B51:N56",
+    // Accessories
+    "Shoulder":           "C58:K58",
+    "Push":               "C59:K59",
+    "Horizontal Row":     "C61:K61",
+    "Vertical Row":       "C62:K62",
+    "Anterior chain":     "C64:K64",
+    "Posterior chain":    "C65:K65",
+    "Choice of Accessories":"C67:K67"
   }
 };
 

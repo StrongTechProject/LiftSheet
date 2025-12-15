@@ -58,7 +58,16 @@ const CONFIG = {
     "Tertiary Bench":     "B44:N49", // Updated
 
     // Reset / Default
-    "Choice of Mainlift":    "B51:N56"  // Updated
+    "Choice of Mainlift":    "B51:N56",  // Updated
+
+    // Accessories
+    "Shoulder":           "C58:K58",
+    "Push":               "C59:K59",
+    "Horizontal Row":     "C61:K61",
+    "Vertical Row":       "C62:K62",
+    "Anterior chain":     "C64:K64",
+    "Posterior chain":    "C65:K65",
+    "Choice of Accessories":"C67:K67"
   }
 };
 
