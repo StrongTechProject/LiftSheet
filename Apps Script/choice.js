@@ -76,5 +76,18 @@ function replaceTemplate(activeSheet, activeRange, keyword) {
   
   const targetRange = activeRange.offset(0, -1);
   
-  sourceRange.copyTo(targetRange);
+  // Define accessory keywords that should paste directly to the active cell
+  const accessoryKeywords = [
+    "Shoulder", "Push", "Horizontal Row", "Vertical Row", 
+    "Anterior chain", "Posterior chain", "Choice of Accessories"
+  ];
+
+  let pasteTargetRange;
+  if (accessoryKeywords.includes(keyword)) {
+    pasteTargetRange = activeRange; // Paste directly to the active cell
+  } else {
+    pasteTargetRange = activeRange.offset(0, -1); // Paste one cell to the left
+  }
+  
+  sourceRange.copyTo(pasteTargetRange);
 }

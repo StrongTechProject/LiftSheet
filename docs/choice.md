@@ -116,11 +116,22 @@ function replaceTemplate(activeSheet, activeRange, keyword) {
   const sourceRange = sourceSheet.getRange(sourceRangeNotation);
   
   // 定位目标区域：
-  // 监听的是 C 列，但模板是从 B 列开始的，所以向左偏移 1 列 (-1)
-  const targetRange = activeRange.offset(0, -1);
+  // 对于主项、次项、三项以及重置模板，监听的是 C 列，但模板从 B 列开始，所以向左偏移 1 列 (-1)。
+  // 对于附件动作，模板将直接粘贴到监听的单元格（C列）。
+  const accessoryKeywords = [
+    "Shoulder", "Push", "Horizontal Row", "Vertical Row", 
+    "Anterior chain", "Posterior chain", "Choice of Accessories"
+  ];
+
+  let pasteTargetRange;
+  if (accessoryKeywords.includes(keyword)) {
+    pasteTargetRange = activeRange; 
+  } else {
+    pasteTargetRange = activeRange.offset(0, -1);
+  }
   
   // 执行复制 (包含值、公式、格式、数据验证等所有属性)
-  sourceRange.copyTo(targetRange);
+  sourceRange.copyTo(pasteTargetRange);
 }
 ```
 
