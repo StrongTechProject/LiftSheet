@@ -249,9 +249,9 @@ function getVolumeRows(frequency) {
       };
     case 4:
       return {
-        group1: [78, 79, 80],  // I78-80
-        group2: [78, 79, 80],  // C78-80
-        group3: [82, 83, 84]   // C82-84
+        group1: [86, 87, 88],  // I86-88
+        group2: [86, 87, 88],  // C86-88
+        group3: [90, 91, 92]   // C90-92
       };
     case 5:
       return {
@@ -262,9 +262,9 @@ function getVolumeRows(frequency) {
     default:
       // Default to 4 days if something goes wrong
       return {
-        group1: [78, 79, 80],
-        group2: [78, 79, 80],
-        group3: [82, 83, 84]
+        group1: [86, 87, 88],
+        group2: [86, 87, 88],
+        group3: [90, 91, 92]
       };
   }
 }
